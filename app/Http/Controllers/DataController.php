@@ -45,10 +45,11 @@ class DataController extends Controller
             'numeric' => 'Kolom : Massukan Angka',
         ];
         $validasi = $request->validate([
-            'nama' => 'required',
-            'nim' => 'required',
-            'prodi' => 'required',
-            'jurusan' => 'required'
+            'nama_produk' => 'required',
+            'gambar' => 'required',
+            'kategori' => 'required',
+            'harga' => 'required',
+            'deskripsi' => 'required'
         ], $message);
         Data::create($validasi);
         return redirect('data')->with('success', 'Data Saved');
@@ -110,10 +111,11 @@ class DataController extends Controller
             'numeric'  => 'Kolom : Massukan Angka',
         ];
         $validasi = $request->validate([
-            'nama' => 'required',
-            'nim' => 'required',
-            'prodi' => 'required',
-            'jurusan' => 'required'
+            'nama_produk' => 'required',
+            'gambar' => 'required',
+            'kategori' => 'required',
+            'harga' => 'required',
+            'deskripsi' => 'required'
         ], $message);
         Data::where('id', $id)->update($validasi);
         return redirect('data')->with('success', 'Data Saved');

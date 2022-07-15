@@ -1,13 +1,13 @@
 <x-template-layout>
     <h2 class="font-semibold text-x1 text-gray-800 leading-tight">
 
-        Data Mahasiswa
+        Data Saya
     </h2>
     <div class="shadow px-6 py-4 bg-white rounded sm:px-1 sm:py-1">
         <div class="grid grid-cols-12">
             <div class="col-span-6 p-4">
                 <a href="{{route('data.create')}}"><button class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Create Data</button></a>
+                        Tambah Data</button></a>
             </div>
 
             <div class="col-span-6 p-4 flex justify-end">
@@ -24,24 +24,25 @@
                 <thead class="bg-gray-600">
 
                     <tr class="text-lg text-left">
-                        <th class="px-3 py-3 text-white">Nama Mahasiswa</th>
-                        <th class="px-3 py-3 text-white">NIM</th>
-                        <th class="px-3 py-3 text-white">Prodi</th>
-                        <th class="px-3 py-3 text-white">Jurusan</th>
+                        <th class="px-3 py-3 text-white">Nama Produk</th>
+                        <th class="px-3 py-3 text-white">Gambar</th>
+                        <th class="px-3 py-3 text-white">Categori</th>
+                        <th class="px-3 py-3 text-white">Harga</th>
+                        <th class="px-3 py-3 text-white">Deskripsi</th>
                         <th class="px-3 py-3 text-white"></th>
                         <th class="px-3 py-3 text-white">Action</th>
 
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-
                     @foreach ($data as $item)
                     <tr>
 
-                        <td>{{$item->nama}}</td>
-                        <td>{{$item->nim}}</td>
-                        <td>{{$item->prodi}}</td>
-                        <td>{{$item->jurusan}}</td>
+                        <td>{{$item->nama_produk}}</td>
+                        <td>{{$item->gambar}}</td>
+                        <td>{{$item->kategori}}</td>
+                        <td>{{$item->harga}}</td>
+                        <td>{{$item->deskripsi}}</td>
                         <td></td>
 
                         <td>

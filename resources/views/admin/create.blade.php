@@ -12,48 +12,59 @@
                 <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                     <div class="grid grid-cols-3 gap-6">
                         <div class="col-span-3 sm:col-span-2">
-                            <label for="nama" class="block text-sm font-medium text-gray-700">
-                                Nama Mahasiswa
+                            <label for="nama_produk" class="block text-sm font-medium text-gray-700">
+                                Nama Produk
                             </label>
                             <div class="mt-1 flex rounded-md shadow-sm">
                                 <input type="text" name="nama" value="{{(isset($data))?$data->nama:old('nama')}}" class="@error('nama') border-red-500 @enderror focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="">
                             </div>
-                            <div class="text-xs text-red-600"> @error('nama') {{$message}} @enderror </div>
+                            <div class="text-xs text-red-600"> @error('nama_produk') {{$message}} @enderror </div>
                         </div>
                     </div>
 
                     <div class="col-span-3 sm:col-span-2">
-                        <label for="nama" class="block text-sm font-medium text-gray-700">
-                            NIM
+                        <label for="gambar" class="block text-sm font-medium text-gray-700">
+                            Gambar Produk
                         </label>
                         <div class="mt-1 flex rounded-md shadow-sm">
                             <input type="text" name="nim" value="{{(isset($data))?$data->nim:old('nim')}}" class="@error('nim') border-red-500 @enderror focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="">
                         </div>
-                        <div class="text-xs text-red-600"> @error('nim') {{$message}} @enderror </div>
+                        <div class="text-xs text-red-600"> @error('gambar') {{$message}} @enderror </div>
                     </div>
 
                     <div class="col-span-3 sm:col-span-2">
                         <label for="nama" class="block text-sm font-medium text-gray-700">
-                            Program Studi
+                            Categori
                         </label>
                         <div class="mt-1 flex rounded-md shadow-sm">
                             <input type="text" name="prodi" value="{{(isset($data))?$data->prodi:old('prodi')}}" class="@error('prodi') border-red-500 @enderror focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="">
 
                             </input>
                         </div>
-                        <div class="text-xs text-red-600"> @error('prodi') {{$message}} @enderror </div>
+                        <div class="text-xs text-red-600"> @error('kategori') {{$message}} @enderror </div>
                     </div>
 
                     <div class="col-span-3 sm:col-span-2">
                         <label for="nama" class="block text-sm font-medium text-gray-700">
-                            Jurusan
+                            Harga
                         </label>
                         <div class="mt-1 flex rounded-md shadow-sm">
                             <input type="text" name="jurusan" value="{{(isset($data))?$data->jurusan:old('jurusan')}}" class="@error('jurusan') border-red-500 @enderror focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="">
 
                             </input>
                         </div>
-                        <div class="text-xs text-red-600"> @error('jurusan') {{$message}} @enderror </div>
+                        <div class="text-xs text-red-600"> @error('harga') {{$message}} @enderror </div>
+                    </div>
+                    <div class="col-span-3 sm:col-span-2">
+                        <label for="nama" class="block text-sm font-medium text-gray-700">
+                            Deskripsi
+                        </label>
+                        <div class="mt-1 flex rounded-md shadow-sm">
+                            <input type="text" name="jurusan" value="{{(isset($data))?$data->jurusan:old('jurusan')}}" class="@error('jurusan') border-red-500 @enderror focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="">
+
+                            </input>
+                        </div>
+                        <div class="text-xs text-red-600"> @error('deskripsi') {{$message}} @enderror </div>
                     </div>
                 </div>
 
