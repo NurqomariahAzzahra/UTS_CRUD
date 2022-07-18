@@ -16,7 +16,7 @@ class DataController extends Controller
     public function index()
     {
         $data = Data::all();
-        $title = 'Daftar Mahasiswa';
+        $title = 'Data Saya';
         return view('admin.data', compact('title', 'data'));
     }
 
@@ -157,7 +157,7 @@ class DataController extends Controller
 
         $cari = $request->search;
 
-        $data = data::where('nama', 'like', '%' . $cari . '%')->get();
+        $data = data::where('nama_produk', 'like', '%' . $cari . '%')->get();
         return view('data.search', ['data' => $data]);
     }
 }

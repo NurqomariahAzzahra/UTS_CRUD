@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Belajar CRUD</title>
+    <title>Halaman Admin</title>
 
     <!-- <title>{{ config('app.name', 'Laravel') }}</title> -->
 
@@ -75,9 +75,13 @@
             <nav class="text-white text-base font-semibold pt-3">
                 <a href="{{route('data.index')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                     <i class="fas fa-plus mr-3"></i>
-                    Data Mahasiswa
+                    Data Saya
                 </a>
-
+                <nav class="text-white text-base font-semibold pt-3">
+                    <a href="{{route('data.index')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+                        <i class="fas fa-plus mr-3"></i>
+                        Data
+                    </a>
     </aside>
 
     <div class="w-full flex flex-col h-screen overflow-y-hidden">
@@ -152,10 +156,10 @@
                 {{$slot}}
 
             </main>
-
+            <!-- 
             <footer class="w-full bg-gray-600 text-white text-right p-2">
                 <a target="_blank" class="bold">NurqomariahAzzahra|1915101010</a>.
-            </footer>
+            </footer> -->
         </div>
 
     </div>

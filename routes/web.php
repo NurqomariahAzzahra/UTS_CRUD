@@ -27,9 +27,26 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class, 'index'])->middleware(['auth:sanctum', 'verified']);
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard')->middleware(['auth:sanctum', 'verified']);
 Route::resource('data', DataController::class);
-
-
 Route::get('/search', [SearchController::class, 'search'])->name('search')->middleware(['auth:sanctum', 'verified']);
-
-
 Route::get('/cari', [DataController::class, 'cari']);
+
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('halamanmenu', function () {
+//     return view('halamanmenu');
+// });
+
+// Route::get('dashboard', function () {
+//     return view('dashboard');
+// });
+// Route::get('dashboardUsers', function () {
+//     return view('dashboardUsers');
+// });
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('halamanmenu', function () {
+//     return view('halamanmenu');
+// });
+
+
+Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload');
+Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');

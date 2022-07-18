@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>home</title>
+    <title>Halaman User</title>
 
 
     <!-- Additional CSS Files -->
@@ -48,14 +48,14 @@ https://templatemo.com/tm-571-hexashop
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="/" class="logo">
-                            <img src="assets/images/white-logo.jpg">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="{{ url('/') }}">Home</a></li>
-                            <li class="scroll-to-section"><a href="halamanmenu">Kategori Wilayah</a></li>
+                            <li class="scroll-to-section"><a href="{{ url('/home') }}">Home</a></li>
+                            <li class="scroll-to-section"><a href="#">Kategori Wilayah</a></li>
                             <li class="submenu">
                                 <a href="javascript:;">Login</a>
                                 <ul>
@@ -63,7 +63,6 @@ https://templatemo.com/tm-571-hexashop
                                     <li class="scroll-to-section"><a href="{{ route('register') }}">Register</a></li>
                                 </ul>
                             </li>
-
 
                         </ul>
                         <a class='menu-trigger'>

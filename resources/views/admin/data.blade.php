@@ -18,7 +18,7 @@
             </div>
 
         </div>
-        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg m-3">
+        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg m-2">
 
             <table class="table-fixed w-full">
                 <thead class="bg-gray-600">
@@ -38,11 +38,11 @@
                     @foreach ($data as $item)
                     <tr>
 
-                        <td>{{$item->nama_produk}}</td>
-                        <td>{{$item->gambar}}</td>
-                        <td>{{$item->kategori}}</td>
-                        <td>{{$item->harga}}</td>
-                        <td>{{$item->deskripsi}}</td>
+                        <td class="px-3 py-3">{{$item->nama_produk}}</td>
+                        <td class="px-3 py-3">{{$item->gambar}}</td>
+                        <td class="px-3 py-3">{{$item->kategori}}</td>
+                        <td class="px-3 py-3">{{$item->harga}}</td>
+                        <td class="px-3 py-3">{{$item->deskripsi}}</td>
                         <td></td>
 
                         <td>
