@@ -4,6 +4,7 @@ use App\Http\Controllers\DataController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ImageUploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,11 +32,10 @@ Route::get('/search', [SearchController::class, 'search'])->name('search')->midd
 Route::get('/cari', [DataController::class, 'cari']);
 
 
+Route::get('halamanmenu', function () {
+    return view('halamanmenu');
+});
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('halamanmenu', function () {
-//     return view('halamanmenu');
-// });
-
 // Route::get('dashboard', function () {
 //     return view('dashboard');
 // });
@@ -48,5 +48,5 @@ Route::get('/cari', [DataController::class, 'cari']);
 // });
 
 
-Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload');
-Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
+Route::get('image-upload', [ImageUploadController::class, 'imageUpload'])->name('image.upload');
+Route::post('image-upload', [ImageUploadController::class, 'imageUploadPost'])->name('image.upload.post');

@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>kategori</title>
+    <title>Kategori Wilayah</title>
 
 
     <!-- Additional CSS Files -->
@@ -59,7 +59,7 @@ https://templatemo.com/tm-571-hexashop
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="/" , class="active">Home</a></li>
                             <li class="submenu">
-                                <a href="javascript:;">kategori</a>
+                                <a href="javascript:;">Kategori Wilayah</a>
                                 <ul>
                                     <li class="scroll-to-section"><a href="#men">Men's</a></li>
                                     <li class="scroll-to-section"><a href="#women">Women's</a></li>
@@ -784,7 +784,8 @@ https://templatemo.com/tm-571-hexashop
 
                             <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
 
-                            <br>Distributed By: <a href="https://themewagon.com" target="_blank" title="free & premium responsive templates">ThemeWagon</a></p>
+                            <br>Distributed By: <a href="https://themewagon.com" target="_blank" title="free & premium responsive templates">ThemeWagon</a>
+                        </p>
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>

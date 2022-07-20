@@ -1,12 +1,11 @@
 <x-template-layout>
-    <h2 class="font-semibold text-x1 text-gray-800 leading-tight">
-
-        Data Saya
-    </h2>
-    <div class="shadow px-6 py-4 bg-white rounded sm:px-1 sm:py-1">
+    <h8 class="font-semibold text-x3 text-gray-800 leading-tight">
+        Produk Saya
+    </h8>
+    <div class="shadow px-10 py-10 bg-white rounded sm:px-5 sm:py-1">
         <div class="grid grid-cols-12">
             <div class="col-span-6 p-4">
-                <a href="{{route('data.create')}}"><button class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <a href="{{route('data.create')}}"><button class="inline-flex justify-center py-2 px-3 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Tambah Data</button></a>
             </div>
 
@@ -39,7 +38,9 @@
                     <tr>
 
                         <td class="px-3 py-3">{{$item->nama_produk}}</td>
-                        <td class="px-3 py-3">{{$item->gambar}}</td>
+                        <td class="px-3 py-3">
+                            <img src="{{asset('storage/'.$item->gambar)}}" class="w-10" alt=""></img>
+                        </td>
                         <td class="px-3 py-3">{{$item->kategori}}</td>
                         <td class="px-3 py-3">{{$item->harga}}</td>
                         <td class="px-3 py-3">{{$item->deskripsi}}</td>

@@ -58,7 +58,7 @@
 
 <body class="bg-gray-100 font-family-karla flex">
 
-    <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
+    <aside class="relative bg-red-600 h-200 w-60 hidden sm:block shadow-x1">
         <!-- <div class="p-6">
             <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
             <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
@@ -68,17 +68,17 @@
             <a href="" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
         </div>
         <nav class="text-white text-base font-semibold pt-3">
-            <a href="{{route('dashboard')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
-                <aside class="fas fa-tachometer-alt mr-3"></aside>
+            <a href="{{route('dashboard')}}" class="flex items-center active-nav-link{background: bg-red-600} text-white py-4 pl-6 hover:text-gray-300">
+                <aside class="fas fa-tachometer-alt mr-3 hover:text-gray-300"></aside>
                 Dashboard
             </a>
             <nav class="text-white text-base font-semibold pt-3">
-                <a href="{{route('data.index')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+                <a href="{{route('data.index')}}" class="flex items-center  active-nav-link{background: bg-red-600} text-white py-4 pl-6 hover:text-gray-300">
                     <i class="fas fa-plus mr-3"></i>
-                    Data Saya
+                    Produk Saya
                 </a>
                 <nav class="text-white text-base font-semibold pt-3">
-                    <a href="{{route('data.index')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+                    <a href="{{route('data.index')}}" class="flex items-center active-nav-link{background: bg-red-600} text-white py-4 pl-6 hover:text-gray-300">
                         <i class="fas fa-plus mr-3"></i>
                         Data
                     </a>
@@ -105,16 +105,16 @@
 
             <!-- Dropdown Nav -->
             <nav :class="isOpen ? 'flex': 'hidden'" class="flex flex-col pt-4">
-                <a href="{{route('dashboard')}}" class="flex items-center active-nav-link text-white py-2 pl-4 nav-item">
+                <a href="{{route('dashboard')}}" class="flex items-center active-nav-link text-white py-2 pl-4 hover:text-gray-300">
                     <i class="fas fa-tachometer-alt mr-3"></i>
 
                     Dashboard
                 </a>
-                <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 hover:text-gray-300">
                     <i class="fas fa-sticky-note mr-3"></i>
                     Blank Page
                 </a>
-                <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 hover:text-gray-300">
                     <i class="fas fa-table mr-3"></i>
                     Tables
                 </a>

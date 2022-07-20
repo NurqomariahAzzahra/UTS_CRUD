@@ -15,10 +15,12 @@ class CreateDataTable extends Migration
     {
         Schema::create('data', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->integer('nim');
-            $table->string('prodi');
-            $table->string('jurusan');
+            $table->foreignId('user_id');
+            $table->string('nama_produk');
+            $table->string('gambar');
+            $table->string('kategori');
+            $table->integer('harga');
+            $table->string('deskripsi');
             $table->timestamps();
         });
     }

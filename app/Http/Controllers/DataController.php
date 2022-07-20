@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Data;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules\Unique;
 
 class DataController extends Controller
@@ -16,7 +17,7 @@ class DataController extends Controller
     public function index()
     {
         $data = Data::all();
-        $title = 'Data Saya';
+        $title = 'Produk Saya';
         return view('admin.data', compact('title', 'data'));
     }
 
@@ -25,8 +26,14 @@ class DataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        // $data = Data::create($request->all());
+        // if($request->hasFile('gambar')){
+        //     $request->file('gambar')->move('gambarmakanan/', $request->file('gambar')->getClientOriginalName());
+        //     $data->foto = $request->file('gambar')->getClientOriginalName();
+        //     $data->Save();
+        // }
         $title = "Masukkan Data";
         return view('admin.create', compact('title'));
     }
@@ -46,24 +53,17 @@ class DataController extends Controller
         ];
         $validasi = $request->validate([
             'nama_produk' => 'required',
-            'gambar' => 'required',
+            'gambar' => '',
             'kategori' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required'
         ], $message);
+        // $fileName = time() . $request->file('gambar')->getClientOriginalName();
+        $path = $request->file('gambar')->store('gambars');
+        $validasi['user_id'] = Auth::id();
+        $validasi['gambar'] = $path;
         Data::create($validasi);
         return redirect('data')->with('success', 'Data Saved');
-
-        // $this->validate($request, [
-        //     'nama' => 'required'
-        // ]);
-        // Data::create([
-        //     'nama' => request('nama'),
-        //     'nim' => request('nim'),
-        //     'prodi' => request('prodi'),
-        //     'jurusan' => request('jurusan'),
-        // ]);
-        // return redirect('data')->with('success', 'data saved');
     }
 
     /**
@@ -88,12 +88,6 @@ class DataController extends Controller
         $data = Data::find($id);
         $title = 'Edit Data Mahasiwa';
         return view('admin.create', compact('title', 'data'));
-        // if (!$data) {
-        //     abort(404);
-        // }
-
-        //     ->with('title', $title)
-        //     ->with('data', $data);
     }
 
     /**
@@ -106,17 +100,22 @@ class DataController extends Controller
     public function update(Request $request, $id)
     {
         $message = [
-            'required' => 'Kolom : Isi Dengan Lengkap',
-            'date'     => 'Kolom : Masukkan Tanggal Dengan Benar',
-            'numeric'  => 'Kolom : Massukan Angka',
+            'required' => 'Kolom : Wajib Diisi*',
+            'date'    => 'Kolom : Masukkan Tanggal Dengan Benar',
+            'numeric' => 'Kolom : Massukan Angka',
         ];
         $validasi = $request->validate([
             'nama_produk' => 'required',
-            'gambar' => 'required',
             'kategori' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required'
         ], $message);
+        if ($request->hasFile('gambar')) {
+            $path = $request->file('gambar')->store('gambars');
+            $validasi['gambar'] = $path;
+        }
+        $validasi['user_id'] = Auth::id();
+
         Data::where('id', $id)->update($validasi);
         return redirect('data')->with('success', 'Data Saved');
     }
