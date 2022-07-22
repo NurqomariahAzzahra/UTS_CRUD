@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Halaman Admin</title>
+    <title>Halaman Super Admin</title>
 
     <!-- <title>{{ config('app.name', 'Laravel') }}</title> -->
 
@@ -75,18 +75,13 @@
             <nav class="text-white text-base font-semibold pt-3">
                 <a href="{{route('data.index')}}" class="flex items-center  active-nav-link{background: bg-red-600} text-white py-4 pl-6 hover:text-gray-300">
                     <i class="fas fa-plus mr-3"></i>
-                    Produk Saya
+                    VALIDASI DATA
                 </a>
                 <nav class="text-white text-base font-semibold pt-3">
                     <a href="{{route('data.index')}}" class="flex items-center active-nav-link{background: bg-red-600} text-white py-4 pl-6 hover:text-gray-300">
                         <i class="fas fa-plus mr-3"></i>
-                        Data
+                        DATA PENGUSAHA
                     </a>
-                    <nav class="text-white text-base font-semibold pt-3">
-                        <a href="{{route('datapengusaha.index')}}" class="flex items-center active-nav-link{background: bg-red-600} text-white py-4 pl-6 hover:text-gray-300">
-                            <i class="fas fa-plus mr-3"></i>
-                            Validasi Data
-                        </a>
     </aside>
 
     <div class="w-full flex flex-col h-screen overflow-y-hidden">

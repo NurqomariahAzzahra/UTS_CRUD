@@ -2,7 +2,7 @@
     <h5 class="font-bold text-x1 text-gray-800 leading-tight">
         <h1 class=" text-2xl leading-6 font-extrabold tracking-tight text-gray-900 sm:text-2xl">
             <!-- {{$title}} -->
-            DASHBOARD
+            DASHBOARD SUPER ADMIN
         </h1>
     </h5>
     <div class="shadow px-10 py-10 bg-white rounded sm:px-5 sm:py-1">
@@ -76,13 +76,18 @@
             <script>
                 /*Toggle dropdown list*/
                 /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
                 var userMenuDiv = document.getElementById("userMenu");
                 var userMenu = document.getElementById("userButton");
+
                 var navMenuDiv = document.getElementById("nav-content");
                 var navMenu = document.getElementById("nav-toggle");
+
                 document.onclick = check;
+
                 function check(e) {
                     var target = (e && e.target) || (event && event.srcElement);
+
                     //User Menu
                     if (!checkParent(target, userMenuDiv)) {
                         // click NOT on the menu
@@ -98,6 +103,7 @@
                             userMenuDiv.classList.add("invisible");
                         }
                     }
+
                     //Nav Menu
                     if (!checkParent(target, navMenuDiv)) {
                         // click NOT on the menu
@@ -113,7 +119,9 @@
                             navMenuDiv.classList.add("hidden");
                         }
                     }
+
                 }
+
                 function checkParent(t, elm) {
                     while (t.parentNode) {
                         if (t == elm) {

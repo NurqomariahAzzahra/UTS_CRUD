@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\DatapengusahaController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
@@ -17,6 +18,9 @@ use App\Http\Controllers\ImageUploadController;
 |
 */
 
+//Route Untuk Super Admin
+Route::resource('datapengusaha', DatapengusahaController::class);
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -30,6 +34,7 @@ Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard'
 Route::resource('data', DataController::class);
 Route::get('/search', [SearchController::class, 'search'])->name('search')->middleware(['auth:sanctum', 'verified']);
 Route::get('/cari', [DataController::class, 'cari']);
+Route::get('/redirects', [DataController::class, 'index']);
 
 
 Route::get('halamanmenu', function () {
@@ -47,6 +52,3 @@ Route::get('halamanmenu', function () {
 //     return view('halamanmenu');
 // });
 
-
-Route::get('image-upload', [ImageUploadController::class, 'imageUpload'])->name('image.upload');
-Route::post('image-upload', [ImageUploadController::class, 'imageUploadPost'])->name('image.upload.post');

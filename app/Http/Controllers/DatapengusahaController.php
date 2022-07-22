@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Data;
+use App\Models\Datapengusaha;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules\Unique;
 
-class DataController extends Controller
+class DatapengusahaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,22 +16,9 @@ class DataController extends Controller
      */
     public function index()
     {
-        $role=Auth::user()->role;
-        if($role=='0')
-        {
-            $data = Data::all();
-            $title = 'Produk Saya';
-            return view('admin.data', compact('title', 'data'));
-        }
-        if($role=='1')
-        {
-            $data = Data::all();
-            $title = 'Produk Saya';
-            return view('superAdmin.dashboard', compact('title', 'data'));
-        }
-        // $data = Data::all();
-        // $title = 'Produk Saya';
-        // return view('admin.data', compact('title', 'data'));
+        $data = Datapengusaha::all();
+        $title = 'Semua Data Pengusaha';
+        return view('superAdmin.datapengusaha', compact('title', 'data'));
     }
 
     /**
@@ -39,16 +26,10 @@ class DataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        // $data = Data::create($request->all());
-        // if($request->hasFile('gambar')){
-        //     $request->file('gambar')->move('gambarmakanan/', $request->file('gambar')->getClientOriginalName());
-        //     $data->foto = $request->file('gambar')->getClientOriginalName();
-        //     $data->Save();
-        // }
         $title = "Masukkan Data";
-        return view('admin.create', compact('title'));
+        return view('superAdmin.create', compact('title'));
     }
 
     /**
@@ -75,8 +56,8 @@ class DataController extends Controller
         $path = $request->file('gambar')->store('gambars');
         $validasi['user_id'] = Auth::id();
         $validasi['gambar'] = $path;
-        Data::create($validasi);
-        return redirect('data')->with('success', 'Data Saved');
+        Datapengusaha::create($validasi);
+        return redirect('datapengusaha')->with('success', 'Data Saved');
     }
 
     /**
@@ -98,9 +79,9 @@ class DataController extends Controller
      */
     public function edit($id)
     {
-        $data = Data::find($id);
+        $data = Datapengusaha::find($id);
         $title = 'Edit Data Mahasiwa';
-        return view('admin.create', compact('title', 'data'));
+        return view('superAdmin.create', compact('title', 'data'));
     }
 
     /**
@@ -129,10 +110,9 @@ class DataController extends Controller
         }
         $validasi['user_id'] = Auth::id();
 
-        Data::where('id', $id)->update($validasi);
+        Datapengusaha::where('id', $id)->update($validasi);
         return redirect('data')->with('success', 'Data Saved');
     }
-
 
     /**
      * Remove the specified resource from storage.
@@ -142,34 +122,8 @@ class DataController extends Controller
      */
     public function destroy($id)
     {
-        $data = Data::find($id);
+        $data = Datapengusaha::find($id);
         $data->delete();
         return redirect('data')->with('success', 'Data Deleted');
-        //
-        // $data = Data::find($id);       //cari id yang dipencet
-        // $data->delete();                  //delete id tersebut
-
-        // return redirect('/data')->with('success', 'data deleted');                //redirect lagi ke home
-    }
-    // }
-
-    // /**
-    //  * Remove the specified resource from storage.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function destroy($id)
-    // {
-    //     //
-    // }
-
-    public function cari(Request $request)
-    {
-
-        $cari = $request->search;
-
-        $data = data::where('nama_produk', 'like', '%' . $cari . '%')->get();
-        return view('data.search', ['data' => $data]);
     }
 }
