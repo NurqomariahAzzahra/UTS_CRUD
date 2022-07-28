@@ -30,7 +30,7 @@ https://templatemo.com/tm-571-hexashop
 
 <body>
 
-    <!-- ***** Preloader Start ***** -->
+    <!-- ** Preloader Start ** -->
     <div id="preloader">
         <div class="jumper">
             <div></div>
@@ -38,21 +38,21 @@ https://templatemo.com/tm-571-hexashop
             <div></div>
         </div>
     </div>
-    <!-- ***** Preloader End ***** -->
+    <!-- ** Preloader End ** -->
 
 
-    <!-- ***** Header Area Start ***** -->
+    <!-- ** Header Area Start ** -->
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
+                        <!-- ** Logo Start ** -->
                         <a href="/" class="logo">
                             <img src="assets/images/white-logo.jpg">
                         </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
+                        <!-- ** Logo End ** -->
+                        <!-- ** Menu Start ** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ url('/') }}">Home</a></li>
                             <li class="scroll-to-section"><a href="halamanmenu">Kategori Wilayah</a></li>
@@ -69,15 +69,15 @@ https://templatemo.com/tm-571-hexashop
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ***** Menu End ***** -->
+                        <!-- ** Menu End ** -->
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- ***** Header Area End ***** -->
+    <!-- ** Header Area End ** -->
 
-    <!-- ***** Main Banner Area Start ***** -->
+    <!-- ** Main Banner Area Start ** -->
     <div class="page-heading about-page-heading" id="top">
         <div class="container">
             <div class="row">
@@ -92,14 +92,14 @@ https://templatemo.com/tm-571-hexashop
     </div>
 
 
-    <!-- ***** Our Team Area Starts ***** -->
+    <!-- ** Our Team Area Starts ** -->
     <section class="our-team">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
                         <h2>Populer</h2>
-                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                        <!-- <span>Details to details is what makes Hexashop different from the other themes.</span> -->
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -115,10 +115,10 @@ https://templatemo.com/tm-571-hexashop
                                     </ul>
                                 </div>
                             </div>
-                            <img src="assets/images/team-member-01.jpg">
+                            <img src="assets/images/gambar nasi goreng bumbu kuning bali.jpg">
                         </div>
                         <div class="down-content">
-                            <h4>Ragnar Lodbrok</h4>
+                            <h4>Nasi Goreng Bumbu Kuning Bali</h4>
                             <span>Product Caretaker</span>
                         </div>
                     </div>
@@ -136,10 +136,10 @@ https://templatemo.com/tm-571-hexashop
                                     </ul>
                                 </div>
                             </div>
-                            <img src="assets/images/team-member-02.jpg">
+                            <img src="assets/images/gambar nasi goreng bumbu kuning bali.jpg">
                         </div>
                         <div class="down-content">
-                            <h4>Ragnar Lodbrok</h4>
+                            <h4>Nasi Goreng Bumbu Kuning Bali</h4>
                             <span>Product Caretaker</span>
                         </div>
                     </div>
@@ -157,10 +157,10 @@ https://templatemo.com/tm-571-hexashop
                                     </ul>
                                 </div>
                             </div>
-                            <img src="assets/images/team-member-03.jpg">
+                            <img src="assets/images/gambar nasi goreng bumbu kuning bali.jpg">
                         </div>
                         <div class="down-content">
-                            <h4>Ragnar Lodbrok</h4>
+                            <h4>Nasi Goreng Bumbu Kuning Bali</h4>
                             <span>Product Caretaker</span>
                         </div>
                     </div>
@@ -168,48 +168,48 @@ https://templatemo.com/tm-571-hexashop
             </div>
         </div>
     </section>
-    <!-- ***** Our Team Area Ends ***** -->
+    <!-- ** Our Team Area Ends ** -->
 
-    <!-- ***** Services Area Starts ***** -->
+    <!-- ** Services Area Starts ** -->
     <section class="our-services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-heading">
+                    <!-- <div class="section-heading">
                         <h2>Our Services</h2>
                         <span>Details to details is what makes Hexashop different from the other themes.</span>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
                     <div class="service-item">
                         <h4>Synther Vaporware</h4>
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
                         <img src="assets/images/service-01.jpg" alt="">
-                    </div>
+                    </div> -->
                 </div>
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
                     <div class="service-item">
                         <h4>Locavore Squidward</h4>
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
                         <img src="assets/images/service-02.jpg" alt="">
-                    </div>
+                    </div> -->
                 </div>
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
                     <div class="service-item">
                         <h4>Health Gothfam</h4>
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
                         <img src="assets/images/service-03.jpg" alt="">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </section>
-    <!-- ***** Services Area Ends ***** -->
+    <!-- ** Services Area Ends ** -->
 
-    <!-- ***** Subscribe Area Starts ***** -->
+    <!-- ** Subscribe Area Starts ** -->
     <div class="subscribe">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-8">
                     <div class="section-heading">
                         <h2>By Subscribing To Our Newsletter You Can Get 30% Off</h2>
@@ -224,7 +224,7 @@ https://templatemo.com/tm-571-hexashop
                             </div>
                             <div class="col-lg-5">
                                 <fieldset>
-                                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                                    <input name="email" type="text" id="email" pattern="[^ @]@[^ @]" placeholder="Your Email Address" required="">
                                 </fieldset>
                             </div>
                             <div class="col-lg-2">
@@ -253,12 +253,12 @@ https://templatemo.com/tm-571-hexashop
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
-    <!-- ***** Subscribe Area Ends ***** -->
+    <!-- ** Subscribe Area Ends ** -->
 
-    <!-- ***** Footer Start ***** -->
+    <!-- ** Footer Start ** -->
     <footer>
         <div class="container">
             <div class="row">

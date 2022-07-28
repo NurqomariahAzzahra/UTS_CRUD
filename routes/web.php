@@ -5,7 +5,9 @@ use App\Http\Controllers\DatapengusahaController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ImageUploadController;
+use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +27,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//     return view('dashboard');
-// })->name('dashboard');
-
 Route::get('/home', [HomeController::class, 'index'])->middleware(['auth:sanctum', 'verified']);
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard')->middleware(['auth:sanctum', 'verified']);
 Route::resource('data', DataController::class);
@@ -36,19 +34,13 @@ Route::get('/search', [SearchController::class, 'search'])->name('search')->midd
 Route::get('/cari', [DataController::class, 'cari']);
 Route::get('/redirects', [DataController::class, 'index']);
 
+Route::resource('tmenu', TmenuController::class);
 
 Route::get('halamanmenu', function () {
     return view('halamanmenu');
 });
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('dashboard', function () {
-//     return view('dashboard');
-// });
-// Route::get('dashboardUsers', function () {
-//     return view('dashboardUsers');
-// });
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('halamanmenu', function () {
-//     return view('halamanmenu');
-// });
 
+Route::resource('produk', ProdukController::class);
+Route::get('/menu', [MenuController::class, 'index']);
+Route::resource('resto', MenuController::class);
+Route::get('/resto', [MenuController::class, 'restoran']);

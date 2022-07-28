@@ -78,7 +78,7 @@
                     Produk Saya
                 </a>
                 <nav class="text-white text-base font-semibold pt-3">
-                    <a href="{{route('data.index')}}" class="flex items-center active-nav-link{background: bg-red-600} text-white py-4 pl-6 hover:text-gray-300">
+                    <a href="/resto" class="flex items-center active-nav-link{background: bg-red-600} text-white py-4 pl-6 hover:text-gray-300">
                         <i class="fas fa-plus mr-3"></i>
                         Data
                     </a>

@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Data;
-use App\Models\Trestoran;
 use Illuminate\Http\Request;
+use App\Models\Menu;
+use App\Models\Restoran;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\Rules\Unique;
 
-class DataController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,22 +16,16 @@ class DataController extends Controller
      */
     public function index()
     {
-        $role=Auth::user()->role;
-        if($role=='0')
-        {
-            $data = Data::all();
-            $title = 'Produk Saya';
-            return view('admin.data', compact('title', 'data'));
-        }
-        if($role=='1')
-        {
-            $data = Data::all();
-            $title = 'Produk Saya';
-            return view('superAdmin.dashboard', compact('title', 'data'));
-        }
-        // $data = Data::all();
-        // $title = 'Produk Saya';
-        // return view('admin.data', compact('title', 'data'));
+        $menu = Menu::all();
+        $title = 'Produk Saya';
+        return view('produkRestoran.menu', compact('title', 'menu'));
+    }
+
+    public function restoran()
+    {
+        $restoran = Restoran::all();
+        $title = 'Produk Saya';
+        return view('produkRestoran.restoran', compact('title', 'restoran'));
     }
 
     /**
@@ -40,10 +33,10 @@ class DataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
         $title = "Masukkan Data";
-        return view('admin.create', compact('title'));
+        return view('produkRestoran.create', compact('title'));
     }
 
     /**
@@ -70,7 +63,7 @@ class DataController extends Controller
         $path = $request->file('gambar')->store('gambars');
         $validasi['user_id'] = Auth::id();
         $validasi['gambar'] = $path;
-        Data::create($validasi);
+        Menu::create($validasi);
         return redirect('data')->with('success', 'Data Saved');
     }
 
@@ -93,9 +86,9 @@ class DataController extends Controller
      */
     public function edit($id)
     {
-        $data = Data::find($id);
+        $menu = Menu::find($id);
         $title = 'Edit Data Mahasiwa';
-        return view('admin.create', compact('title', 'data'));
+        return view('produkRestoran.create', compact('title', 'menu'));
     }
 
     /**
@@ -124,10 +117,9 @@ class DataController extends Controller
         }
         $validasi['user_id'] = Auth::id();
 
-        Data::where('id', $id)->update($validasi);
-        return redirect('data')->with('success', 'Data Saved');
+        Menu::where('id', $id)->update($validasi);
+        return redirect('menu')->with('success', 'Data Saved');
     }
-
 
     /**
      * Remove the specified resource from storage.
@@ -137,28 +129,8 @@ class DataController extends Controller
      */
     public function destroy($id)
     {
-        $data = Data::find($id);
-        $data->delete();
-        return redirect('data')->with('success', 'Data Deleted');
-
-    }
-    // }
-
-    // /**
-    //  * Remove the specified resource from storage.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function destroy($id)
-    // {
-    //     //
-    // }
-
-    public function cari(Request $request)
-    {
-        $cari = $request->search;
-        $data = data::where('nama_produk', 'like', '%' . $cari . '%')->get();
-        return view('data.search', ['data' => $data]);
+        $menu = Menu::find($id);
+        $menu->delete();
+        return redirect('menu')->with('success', 'Data Deleted');
     }
 }
