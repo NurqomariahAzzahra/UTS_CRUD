@@ -9,7 +9,7 @@ class Data extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'user_id', 'nama_produk',  'gambar', 'kategori', 'harga', 'deskripsi'
+        'user_id', 'nama_produk',  'gambar', 'wilayah_id', 'harga', 'deskripsi'
     ];
     public function jurusan()
     {

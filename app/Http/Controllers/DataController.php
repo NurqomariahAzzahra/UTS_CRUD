@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Data;
+use App\Models\Wilayah;
 use App\Models\Trestoran;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -42,9 +43,17 @@ class DataController extends Controller
      */
     public function create(Request $request)
     {
+        // $data = Data::create($request->all());
+        // if($request->hasFile('gambar')){
+        //     $request->file('gambar')->move('gambarmakanan/', $request->file('gambar')->getClientOriginalName());
+        //     $data->foto = $request->file('gambar')->getClientOriginalName();
+        //     $data->Save();
+        // }
+        $wilayah = Wilayah::all();
         $title = "Masukkan Data";
-        return view('admin.create', compact('title'));
+        return view('admin.create', compact('title', 'wilayah'));
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -62,7 +71,7 @@ class DataController extends Controller
         $validasi = $request->validate([
             'nama_produk' => 'required',
             'gambar' => '',
-            'kategori' => 'required',
+            'wilayah_id' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required'
         ], $message);
@@ -93,9 +102,10 @@ class DataController extends Controller
      */
     public function edit($id)
     {
+        $wilayah = Wilayah::all();
         $data = Data::find($id);
         $title = 'Edit Data Mahasiwa';
-        return view('admin.create', compact('title', 'data'));
+        return view('admin.create', compact('title', 'data', 'wilayah'));
     }
 
     /**
@@ -114,7 +124,7 @@ class DataController extends Controller
         ];
         $validasi = $request->validate([
             'nama_produk' => 'required',
-            'kategori' => 'required',
+            'wilayah_id' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required'
         ], $message);

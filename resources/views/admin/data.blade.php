@@ -25,7 +25,7 @@
                     <tr class="text-lg text-left">
                         <th class="px-3 py-3 text-white">Nama Produk</th>
                         <th class="px-3 py-3 text-white">Gambar</th>
-                        <th class="px-3 py-3 text-white">Categori</th>
+                        <th class="px-3 py-3 text-white">Wilayah</th>
                         <th class="px-3 py-3 text-white">Harga</th>
                         <th class="px-3 py-3 text-white">Deskripsi</th>
                         <th class="px-3 py-3 text-white"></th>
@@ -41,7 +41,7 @@
                         <td class="px-3 py-3">
                             <img src="{{asset('storage/'.$item->gambar)}}" class="w-10" alt=""></img>
                         </td>
-                        <td class="px-3 py-3">{{$item->kategori}}</td>
+                        <td class="px-3 py-3">{{$item->wilayah_id}}</td>
                         <td class="px-3 py-3">{{$item->harga}}</td>
                         <td class="px-3 py-3">{{$item->deskripsi}}</td>
                         <td></td>
