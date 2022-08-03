@@ -59,13 +59,35 @@
                             </div>
                         </div>
 
+                        <div class="col-span-3 sm:col-span-2">
+                            <label for="harga" class="block text-sm font-medium text-gray-700">
+                                Harga
+                            </label>
+                            <div class="mt-1 flex rounded-md shadow-sm">
+                                <input type="text" name="harga" value="{{(isset($data))?$data->harga:old('harga')}}" class="@error('harga') border-red-500 @enderror focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="">
+
+                                </input>
+                            </div>
+                            <div class="text-xs text-red-600"> @error('harga') {{$message}} @enderror </div>
+                        </div>
+
+                        <div class="col-span-3 sm:col-span-2">
+                            <label for="deskripsi" class="block text-sm font-medium text-gray-700">
+                                Deskripsi
+                            </label>
+                            <div class="mt-1 flex rounded-md shadow-sm">
+                                <input type="text" name="deskripsi" value="{{(isset($data))?$data->deskripsi:old('deskripsi')}}" class="@error('deskripsi') border-red-500 @enderror focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="">
+
+                                </input>
+                            </div>
+                            <div class="text-xs text-red-600"> @error('deskripsi') {{$message}} @enderror </div>
+                        </div>
 
                         <div class="col-span-3 sm:col-span-2">
                             <label for="wilayah" class="block text-sm font-medium text-gray-700">
                                 Wilayah
                             </label>
                             <div class="mt-1 flex rounded-md shadow-sm">
-
 
                                 <select name="wilayah_id" value="{{(isset($data))?$data->wilayah:old('wilayah_id')}}" class="@error('wilayah_id') border-red-500 @enderror focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="">
                                     <option value="">- Pilih -</option>
@@ -81,28 +103,9 @@
 
                         </div>
 
-                        <div class="col-span-3 sm:col-span-2">
-                            <label for="harga" class="block text-sm font-medium text-gray-700">
-                                Harga
-                            </label>
-                            <div class="mt-1 flex rounded-md shadow-sm">
-                                <input type="text" name="harga" value="{{(isset($data))?$data->harga:old('harga')}}" class="@error('harga') border-red-500 @enderror focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="">
 
-                                </input>
-                            </div>
-                            <div class="text-xs text-red-600"> @error('harga') {{$message}} @enderror </div>
-                        </div>
-                        <div class="col-span-3 sm:col-span-2">
-                            <label for="deskripsi" class="block text-sm font-medium text-gray-700">
-                                Deskripsi
-                            </label>
-                            <div class="mt-1 flex rounded-md shadow-sm">
-                                <input type="text" name="deskripsi" value="{{(isset($data))?$data->deskripsi:old('deskripsi')}}" class="@error('deskripsi') border-red-500 @enderror focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="">
 
-                                </input>
-                            </div>
-                            <div class="text-xs text-red-600"> @error('deskripsi') {{$message}} @enderror </div>
-                        </div>
+
                     </div>
                 </div>
 

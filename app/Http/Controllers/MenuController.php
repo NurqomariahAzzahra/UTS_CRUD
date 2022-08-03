@@ -53,18 +53,18 @@ class MenuController extends Controller
             'numeric' => 'Kolom : Massukan Angka',
         ];
         $validasi = $request->validate([
-            'nama_produk' => 'required',
+            'nama' => 'required',
             'gambar' => '',
-            'kategori' => 'required',
-            'harga' => 'required',
-            'deskripsi' => 'required'
+            'alamat' => 'required',
+            // 'harga' => 'required',
+            // 'deskripsi' => 'required'
         ], $message);
         // $fileName = time() . $request->file('gambar')->getClientOriginalName();
-        $path = $request->file('gambar')->store('gambars');
-        $validasi['user_id'] = Auth::id();
-        $validasi['gambar'] = $path;
-        Menu::create($validasi);
-        return redirect('data')->with('success', 'Data Saved');
+        // $path = $request->file('gambar')->store('gambars');
+        // $validasi['user_id'] = Auth::id();
+        // $validasi['gambar'] = $path;
+        Restoran::create($validasi);
+        return redirect('resto')->with('success', 'Data Saved');
     }
 
     /**
@@ -86,9 +86,9 @@ class MenuController extends Controller
      */
     public function edit($id)
     {
-        $menu = Menu::find($id);
+        $restoran = Restoran::find($id);
         $title = 'Edit Data Mahasiwa';
-        return view('produkRestoran.create', compact('title', 'menu'));
+        return view('produkRestoran.create', compact('title', 'restoran'));
     }
 
     /**
@@ -106,19 +106,11 @@ class MenuController extends Controller
             'numeric' => 'Kolom : Massukan Angka',
         ];
         $validasi = $request->validate([
-            'nama_produk' => 'required',
-            'kategori' => 'required',
-            'harga' => 'required',
-            'deskripsi' => 'required'
+            'nama' => 'required',
+            'alamat' => 'required',
         ], $message);
-        if ($request->hasFile('gambar')) {
-            $path = $request->file('gambar')->store('gambars');
-            $validasi['gambar'] = $path;
-        }
-        $validasi['user_id'] = Auth::id();
-
-        Menu::where('id', $id)->update($validasi);
-        return redirect('menu')->with('success', 'Data Saved');
+        Restoran::where('id', $id)->update($validasi);
+        return redirect('resto')->with('success', 'Data Saved');
     }
 
     /**
@@ -129,8 +121,12 @@ class MenuController extends Controller
      */
     public function destroy($id)
     {
-        $menu = Menu::find($id);
-        $menu->delete();
-        return redirect('menu')->with('success', 'Data Deleted');
+        // $menu = Menu::find($id);
+        // $menu->delete();
+        // return redirect('menu')->with('success', 'Data Deleted');
+
+        $restoran = Restoran::find($id);
+        $restoran->delete();
+        return redirect('restoran')->with('success', 'Data Deleted');
     }
 }

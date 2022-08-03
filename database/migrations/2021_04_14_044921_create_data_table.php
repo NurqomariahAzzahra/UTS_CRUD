@@ -18,7 +18,7 @@ class CreateDataTable extends Migration
             $table->foreignId('user_id');
             $table->string('nama_produk');
             $table->string('gambar');
-            $table->string('kategori');
+            $table->string('wilayah_id');
             $table->integer('harga');
             $table->string('deskripsi');
             $table->timestamps();

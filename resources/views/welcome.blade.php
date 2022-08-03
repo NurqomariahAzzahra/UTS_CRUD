@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>home</title>
+    <title>Home</title>
 
 
     <!-- Additional CSS Files -->
@@ -30,7 +30,7 @@ https://templatemo.com/tm-571-hexashop
 
 <body>
 
-    <!-- ** Preloader Start ** -->
+    <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
             <div></div>
@@ -38,21 +38,21 @@ https://templatemo.com/tm-571-hexashop
             <div></div>
         </div>
     </div>
-    <!-- ** Preloader End ** -->
+    <!-- ***** Preloader End ***** -->
 
 
-    <!-- ** Header Area Start ** -->
+    <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ** Logo Start ** -->
+                        <!-- ***** Logo Start ***** -->
                         <a href="/" class="logo">
                             <img src="assets/images/white-logo.jpg">
                         </a>
-                        <!-- ** Logo End ** -->
-                        <!-- ** Menu Start ** -->
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ url('/') }}">Home</a></li>
                             <li class="scroll-to-section"><a href="halamanmenu">Kategori Wilayah</a></li>
@@ -69,15 +69,15 @@ https://templatemo.com/tm-571-hexashop
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ** Menu End ** -->
+                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- ** Header Area End ** -->
+    <!-- ***** Header Area End ***** -->
 
-    <!-- ** Main Banner Area Start ** -->
+    <!-- ***** Main Banner Area Start ***** -->
     <div class="page-heading about-page-heading" id="top">
         <div class="container">
             <div class="row">
@@ -92,7 +92,7 @@ https://templatemo.com/tm-571-hexashop
     </div>
 
 
-    <!-- ** Our Team Area Starts ** -->
+    <!-- ***** Our Team Area Starts ***** -->
     <section class="our-team">
         <div class="container">
             <div class="row">
@@ -107,19 +107,26 @@ https://templatemo.com/tm-571-hexashop
                         <div class="thumb">
                             <div class="hover-effect">
                                 <div class="inner-content">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                    </ul>
+                                    </ul> -->
+                                    <div class="main-border-button">
+                                        <a href="popular-product">Lihat detail</a>
+                                    </div>
                                 </div>
                             </div>
                             <img src="assets/images/gambar nasi goreng bumbu kuning bali.jpg">
                         </div>
                         <div class="down-content">
+
+
                             <h4>Nasi Goreng Bumbu Kuning Bali</h4>
-                            <span>Product Caretaker</span>
+                            <span>Rating</span>
+                            </tr>
+
                         </div>
                     </div>
                 </div>
@@ -128,19 +135,22 @@ https://templatemo.com/tm-571-hexashop
                         <div class="thumb">
                             <div class="hover-effect">
                                 <div class="inner-content">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                    </ul>
+                                    </ul> -->
+                                    <div class="main-border-button">
+                                        <a href="popular-product">Lihat detail</a>
+                                    </div>
                                 </div>
                             </div>
                             <img src="assets/images/gambar nasi goreng bumbu kuning bali.jpg">
                         </div>
                         <div class="down-content">
                             <h4>Nasi Goreng Bumbu Kuning Bali</h4>
-                            <span>Product Caretaker</span>
+                            <span>Rating</span>
                         </div>
                     </div>
                 </div>
@@ -149,28 +159,31 @@ https://templatemo.com/tm-571-hexashop
                         <div class="thumb">
                             <div class="hover-effect">
                                 <div class="inner-content">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                    </ul>
+                                    </ul> -->
+                                    <div class="main-border-button">
+                                        <a href="popular-product">Lihat detail</a>
+                                    </div>
                                 </div>
                             </div>
                             <img src="assets/images/gambar nasi goreng bumbu kuning bali.jpg">
                         </div>
                         <div class="down-content">
                             <h4>Nasi Goreng Bumbu Kuning Bali</h4>
-                            <span>Product Caretaker</span>
+                            <span>Rating</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ** Our Team Area Ends ** -->
+    <!-- ***** Our Team Area Ends ***** -->
 
-    <!-- ** Services Area Starts ** -->
+    <!-- ***** Services Area Starts ***** -->
     <section class="our-services">
         <div class="container">
             <div class="row">
@@ -186,27 +199,27 @@ https://templatemo.com/tm-571-hexashop
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
                         <img src="assets/images/service-01.jpg" alt="">
                     </div> -->
-                </div>
-                <!-- <div class="col-lg-4">
+            </div>
+            <!-- <div class="col-lg-4">
                     <div class="service-item">
                         <h4>Locavore Squidward</h4>
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
                         <img src="assets/images/service-02.jpg" alt="">
                     </div> -->
-                </div>
-                <!-- <div class="col-lg-4">
+        </div>
+        <!-- <div class="col-lg-4">
                     <div class="service-item">
                         <h4>Health Gothfam</h4>
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
                         <img src="assets/images/service-03.jpg" alt="">
                     </div> -->
-                </div>
-            </div>
+        </div>
+        </div>
         </div>
     </section>
-    <!-- ** Services Area Ends ** -->
+    <!-- ***** Services Area Ends ***** -->
 
-    <!-- ** Subscribe Area Starts ** -->
+    <!-- ***** Subscribe Area Starts ***** -->
     <div class="subscribe">
         <div class="container">
             <!-- <div class="row">
@@ -224,7 +237,7 @@ https://templatemo.com/tm-571-hexashop
                             </div>
                             <div class="col-lg-5">
                                 <fieldset>
-                                    <input name="email" type="text" id="email" pattern="[^ @]@[^ @]" placeholder="Your Email Address" required="">
+                                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
                                 </fieldset>
                             </div>
                             <div class="col-lg-2">
@@ -256,17 +269,17 @@ https://templatemo.com/tm-571-hexashop
             </div> -->
         </div>
     </div>
-    <!-- ** Subscribe Area Ends ** -->
+    <!-- ***** Subscribe Area Ends ***** -->
 
-    <!-- ** Footer Start ** -->
+    <!-- ***** Footer Start ***** -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="first-item">
-                        <div class="logo">
-                            <img src="assets/images/white-logo.jpg" alt="hexashop ecommerce templatemo">
-                        </div>
+                        <!-- <div class="logo">
+                            <img src="assets/images/white-logo.jpg" class="block h-12 w-auto" alt="hexashop ecommerce templatemo">
+                        </div> -->
                         <ul>
                             <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
                             <li><a href="#">hexashop@company.com</a></li>

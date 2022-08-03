@@ -1,12 +1,12 @@
 <x-template-layout>
-    <h1>AZZAHRA</h1>
-    <table class="table-fixed w-full">
-        <thead class="bg-gray-300">
+    <h1>MENU RESTORAN</h1>
+    <table class="table table-striped table-bordered">
+        <thead class="bg-gray-600">
 
             <tr class="text-lg text-left">
-                <th class="px-3 py-3 text-white">Nama Restoran</th>
-                <th class="px-3 py-3 text-white">harga</th>
-                <th class="px-3 py-3 text-white">Wilayah</th>
+                <th class="px-3 py-3 text-white">Nama Menu</th>
+                <th class="px-3 py-3 text-white">Harga</th>
+                <!-- <th class="px-3 py-3 text-white">Wilayah</th> -->
                 <th class="px-3 py-3 text-white">Action</th>
 
             </tr>

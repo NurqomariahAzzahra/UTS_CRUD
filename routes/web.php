@@ -1,13 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\DatapengusahaController;
 use App\Http\Controllers\HomeController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ImageUploadController;
-use Symfony\Component\HttpKernel\DataCollector\DataCollector;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,7 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 Route::resource('datapengusaha', DatapengusahaController::class);
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.welcome');
 });
 
 Route::get('/home', [HomeController::class, 'index'])->middleware(['auth:sanctum', 'verified']);
@@ -36,11 +37,34 @@ Route::get('/redirects', [DataController::class, 'index']);
 
 Route::resource('tmenu', TmenuController::class);
 
-Route::get('halamanmenu', function () {
-    return view('halamanmenu');
+Route::get('kategori', function () {
+    return view('User.halaman_kategori');
 });
+
+Route::get('bangli', function () {
+    return view('user.bangli_kategori');
+});
+
+Route::get('detailkategoriwilayah_kintamani', function () {
+    return view('detailkategoriwilayah_kintamani');
+});
+
+Route::get('detailkategoriwilayah_susut', function () {
+    return view('detailkategoriwilayah_susut');
+});
+
+Route::get('detailkategoriwilayah_tembuku', function () {
+    return view('detailkategoriwilayah_tembuku');
+});
+
+Route::get('popular-product', function () {
+    return view('popular-product');
+});
+
 
 Route::resource('produk', ProdukController::class);
 Route::get('/menu', [MenuController::class, 'index']);
 Route::resource('resto', MenuController::class);
 Route::get('/resto', [MenuController::class, 'restoran']);
+Route::resource('menu', MenuController::class);
+Route::get('/home', [HomeController::class, 'index']);

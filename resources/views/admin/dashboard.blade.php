@@ -1,6 +1,6 @@
 <x-template-layout>
     <h5 class="font-bold text-x1 text-gray-800 leading-tight">
-        <h1 class=" text-2xl leading-6 font-extrabold tracking-tight text-gray-900 sm:text-2xl">
+        <h1 class="text-2xl leading-6 font-extrabold tracking-tight text-gray-900 sm:text-2xl">
             <!-- {{$title}} -->
             DASHBOARD
         </h1>

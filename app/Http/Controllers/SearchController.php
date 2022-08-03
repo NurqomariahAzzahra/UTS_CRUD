@@ -14,7 +14,7 @@ class SearchController extends Controller
     {
         if (isset($_GET['query'])) {
             $search_text = $_GET['query'];
-            $data = DB::table('data')->where('nama', 'LIKE', '%' . $search_text . '%')->paginate(100);
+            $data = DB::table('data')->where('nama', 'LIKE', '%' . $search_text . '%')->paginate(10);
             return view('admin/data', ['data' => $data]);
         } else {
             return view('admin/data');

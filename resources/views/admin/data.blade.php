@@ -1,6 +1,6 @@
 <x-template-layout>
-    <h8 class="font-semibold text-x3 text-gray-800 leading-tight">
-        Produk Saya
+    <h8 class="text-2xl leading-6 font-extrabold tracking-tight text-gray-900 sm:text-2xl">
+        PRODUK SAYA
     </h8>
     <div class="shadow px-10 py-10 bg-white rounded sm:px-5 sm:py-1">
         <div class="grid grid-cols-12">
@@ -28,6 +28,7 @@
                         <th class="px-3 py-3 text-white">Wilayah</th>
                         <th class="px-3 py-3 text-white">Harga</th>
                         <th class="px-3 py-3 text-white">Deskripsi</th>
+                        <th class="px-3 py-3 text-white">Tanggal</th>
                         <th class="px-3 py-3 text-white"></th>
                         <th class="px-3 py-3 text-white">Action</th>
 
@@ -35,23 +36,24 @@
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
                     @foreach ($data as $item)
-                    <tr>
+                    <tr class="">
 
                         <td class="px-3 py-3">{{$item->nama_produk}}</td>
                         <td class="px-3 py-3">
-                            <img src="{{asset('storage/'.$item->gambar)}}" class="w-10" alt=""></img>
+                            <img src="{{asset('storage/'.$item->gambar)}}" class="w-3" alt=""></img>
                         </td>
                         <td class="px-3 py-3">{{$item->wilayah_id}}</td>
                         <td class="px-3 py-3">{{$item->harga}}</td>
                         <td class="px-3 py-3">{{$item->deskripsi}}</td>
+                        <td class="px-3 py-3">{{$item->created_at}}</td> 
                         <td></td>
 
                         <td>
-                            <a href="{{route('data.edit',$item->id)}}"><button class="bg-green-500 px-4 py-1 text-sm rounded text-white font-semibold border border-red-200 hover:text-white  hover:border-transparent focus:outline-none">
+                            <a href="{{route('data.edit',$item->id)}}"><button class="bg-green-500 px-2 py-1 text-sm rounded text-white font-semibold border border-red-200 hover:text-white  hover:border-transparent focus:outline-none">
                                     Edit </button>
 
                                 <form action="{{route('data.destroy',$item->id)}}" method="POST" class="inline">
-                                    <button type="submit" class=" bg-red-500 px-4 py-1 text-sm rounded text-white font-semibold border border-red-200 hover:text-white  hover:border-transparent focus:outline-none" onsubmit="return confirm('yakin hapus')">
+                                    <button type="submit" class=" bg-red-500 px-2 py-1 text-sm rounded text-white font-semibold border border-red-200 hover:text-white  hover:border-transparent focus:outline-none" onsubmit="return confirm('yakin hapus')">
                                         Delete</button>
                             </a>
                             @csrf

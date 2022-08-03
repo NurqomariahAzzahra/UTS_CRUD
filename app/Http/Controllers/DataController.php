@@ -82,7 +82,7 @@ class DataController extends Controller
         Data::create($validasi);
         return redirect('data')->with('success', 'Data Saved');
     }
-
+ 
     /**
      * Display the specified resource.
      *
