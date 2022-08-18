@@ -5,6 +5,7 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\DatapengusahaController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RestoranController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ImageUploadController;
@@ -45,16 +46,16 @@ Route::get('bangli', function () {
     return view('user.bangli_kategori');
 });
 
-Route::get('detailkategoriwilayah_kintamani', function () {
-    return view('detailkategoriwilayah_kintamani');
+Route::get('kintamani', function () {
+    return view('user.kintamani_kategori');
 });
 
-Route::get('detailkategoriwilayah_susut', function () {
-    return view('detailkategoriwilayah_susut');
+Route::get('susut', function () {
+    return view('user.susut_kategori');
 });
 
-Route::get('detailkategoriwilayah_tembuku', function () {
-    return view('detailkategoriwilayah_tembuku');
+Route::get('tembuku', function () {
+    return view('user.tembuku_kategori');
 });
 
 Route::get('popular-product', function () {
@@ -65,6 +66,7 @@ Route::get('popular-product', function () {
 Route::resource('produk', ProdukController::class);
 Route::get('/menu', [MenuController::class, 'index']);
 Route::resource('resto', MenuController::class);
-Route::get('/resto', [MenuController::class, 'restoran']);
+// Route::get('/resto', [MenuController::class, 'restoran']);
 Route::resource('menu', MenuController::class);
 Route::get('/home', [HomeController::class, 'index']);
+Route::resource('restoran', RestoranController::class);

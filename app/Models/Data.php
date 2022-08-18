@@ -11,8 +11,5 @@ class Data extends Model
     protected $fillable = [
         'user_id', 'nama_produk',  'gambar', 'wilayah_id', 'harga', 'deskripsi'
     ];
-    public function jurusan()
-    {
-        return $this->belongsTo(Jurusan::class);
-    }
+
 }

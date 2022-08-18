@@ -9,7 +9,7 @@ class Restoran extends Model
 {
     use HasFactory;
     protected $table = "restorans";
-    protected $fillable = ['nama', 'alamat'];
+    protected $fillable = ['user_id','profil_resto','nama', 'alamat'];
 
     public function menu()
     {

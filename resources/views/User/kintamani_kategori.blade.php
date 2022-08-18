@@ -83,13 +83,13 @@ https://templatemo.com/tm-571-hexashop
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Main Banner Area Start ***** -->
-    <div class="page-heading-5 about-page-heading-5" id="top">
+    <div class="page-heading-3 about-page-heading-3" id="top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
-                        <h2>T E M B U K U</h2>
-                        <span>Tembuku adalah sebuah kecamatan di Kabupaten Bangli, Provinsi Bali, Indonesia. Kecamatan ini terletak di tenggara wilayah Kabupaten Bangli.</span>
+                        <h2>K I N T A M A N I</h2>
+                        <span>Kintamani adalah sebuah kecamatan di Kabupaten Bangli, Provinsi Bali, Indonesia. Kintamani juga merupakan kawasan wisata pemandangan alam di Bali, Indonesia.h</span>
                     </div>
                 </div>
             </div>
@@ -122,10 +122,10 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="assets/images/Warung-Makan04.jpg" alt="">
+                            <img src="assets/images/Warung-Makan02.jpg" alt="">
                         </div>
                         <div class="down-content">
-                            <h4>Light Corner</h4>
+                            <h4>Warung Makan</h4>
                             <!-- <span>$120.00</span> -->
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
@@ -147,10 +147,10 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="assets/images/Warung-Makan04.jpg" alt="">
+                            <img src="assets/images/Warung-Makan02.jpg" alt="">
                         </div>
                         <div class="down-content">
-                            <h4>Light Corner</h4>
+                            <h4>Warung Makan</h4>
                             <!-- <span>$90.00</span> -->
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
@@ -172,10 +172,10 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="assets/images/Warung-Makan04.jpg" alt="">
+                            <img src="assets/images/Warung-Makan02.jpg" alt="">
                         </div>
                         <div class="down-content">
-                            <h4>Light Corner</h4>
+                            <h4>Warung Nasi</h4>
                             <!-- <span>$150.00</span> -->
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
@@ -197,10 +197,10 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="assets/images/Warung-Makan04.jpg" alt="">
+                            <img src="assets/images/Warung-Makan02.jpg" alt="">
                         </div>
                         <div class="down-content">
-                            <h4>Light Corner</h4>
+                            <h4>Warung Makan</h4>
                             <!-- <span>$75.00</span> -->
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
@@ -222,10 +222,10 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="assets/images/Warung-Makan04.jpg" alt="">
+                            <img src="assets/images/Warung-Makan02.jpg" alt="">
                         </div>
                         <div class="down-content">
-                            <h4>Light Corner</h4>
+                            <h4>Warung Makan</h4>
                             <!-- <span>$45.00</span> -->
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
@@ -247,10 +247,10 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="assets/images/Warung-Makan04.jpg" alt="">
+                            <img src="assets/images/Warung-Makan02.jpg" alt="">
                         </div>
                         <div class="down-content">
-                            <h4>Light Corner</h4>
+                            <h4>Warung Makan</h4>
                             <!-- <span>$130.00</span> -->
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
@@ -272,10 +272,10 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="assets/images/Warung-Makan04.jpg" alt="">
+                            <img src="assets/images/Warung-Makan02.jpg" alt="">
                         </div>
                         <div class="down-content">
-                            <h4>Seafood Resto</h4>
+                            <h4>Warung Makan</h4>
                             <!-- <span>$80.00</span> -->
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
@@ -297,10 +297,10 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="assets/images/Warung-Makan04.jpg" alt="">
+                            <img src="assets/images/Warung-Makan02.jpg" alt="">
                         </div>
                         <div class="down-content">
-                            <h4>Light Corner</h4>
+                            <h4>Warung Makan</h4>
                             <!-- <span>$12.00</span> -->
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
@@ -322,10 +322,10 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="assets/images/Warung-Makan04.jpg" alt="">
+                            <img src="assets/images/Warung-Makan02.jpg" alt="">
                         </div>
                         <div class="down-content">
-                            <h4>Light Corner</h4>
+                            <h4>Warung Makan</h4>
                             <!-- <span>$30.00</span> -->
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
@@ -411,7 +411,8 @@ https://templatemo.com/tm-571-hexashop
 
                             <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
 
-                            <br>Distributed By: <a href="https://themewagon.com" target="_blank" title="free & premium responsive templates">ThemeWagon</a></p>
+                            <br>Distributed By: <a href="https://themewagon.com" target="_blank" title="free & premium responsive templates">ThemeWagon</a>
+                        </p>
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>

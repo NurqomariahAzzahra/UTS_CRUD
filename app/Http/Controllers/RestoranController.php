@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Menu;
 use App\Models\Restoran;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rules\Unique;
 
-class MenuController extends Controller
+class RestoranController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,17 +16,10 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menu = Menu::all();
+        $restoran = Restoran::all();
         $title = 'Produk Saya';
-        return view('admin.menu.menu', compact('title', 'menu'));
+        return view('produkRestoran.restoran', compact('title', 'restoran'));
     }
-
-    // public function restoran()
-    // {
-    //     $restoran = Restoran::all();
-    //     $title = 'Produk Saya';
-    //     return view('produkRestoran.restoran', compact('title', 'restoran'));
-    // }
 
     /**
      * Show the form for creating a new resource.
@@ -36,7 +29,7 @@ class MenuController extends Controller
     public function create()
     {
         $title = "Masukkan Data";
-        return view('admin.menu.createMenu', compact('title'));
+        return view('produkRestoran.create', compact('title'));
     }
 
     /**
@@ -59,12 +52,11 @@ class MenuController extends Controller
             // 'harga' => 'required',
             // 'deskripsi' => 'required'
         ], $message);
-        // $fileName = time() . $request->file('gambar')->getClientOriginalName();
-        // $path = $request->file('gambar')->store('gambars');
-        // $validasi['user_id'] = Auth::id();
-        // $validasi['gambar'] = $path;
-        Menu::create($validasi);
-        return redirect('menu')->with('success', 'Data Saved');
+        $path = $request->file('profil_resto')->store('profil_restos');
+        $validasi['user_id'] = Auth::id();
+        $validasi['profil_resto'] = $path;
+        Restoran::create($validasi);
+        return redirect('restoran')->with('success', 'Data Saved');
     }
 
     /**
@@ -86,9 +78,9 @@ class MenuController extends Controller
      */
     public function edit($id)
     {
-        $menu = Menu::find($id);
+        $restoran = Restoran::find($id);
         $title = 'Edit Data Mahasiwa';
-        return view('admin.menu.createMenu', compact('title', 'menu'));
+        return view('produkRestoran.create', compact('title', 'restoran'));
     }
 
     /**
@@ -109,8 +101,8 @@ class MenuController extends Controller
             'nama' => 'required',
             'alamat' => 'required',
         ], $message);
-        Menu::where('id', $id)->update($validasi);
-        return redirect('menu')->with('success', 'Data Saved');
+        Restoran::where('id', $id)->update($validasi);
+        return redirect('restoran')->with('success', 'Data Saved');
     }
 
     /**
@@ -121,8 +113,8 @@ class MenuController extends Controller
      */
     public function destroy($id)
     {
-        // $restoran = Restoran::find($id);
-        // $restoran->delete();
-        // return redirect('restoran')->with('success', 'Data Deleted');
+        $restoran = Restoran::find($id);
+        $restoran->delete();
+        return redirect('restoran')->with('success', 'Data Deleted');
     }
 }

@@ -43,10 +43,10 @@
                         <td class="px-3 py-3">{{$menu->deskripsi}}</td>
                         <td></td>
                         <td>
-                            <a href="#"><button class="bg-green-500 px-2 py-1 text-sm rounded text-white font-semibold border border-red-200 hover:text-white  hover:border-transparent focus:outline-none">
+                            <a href="{{route('menu.edit',$menu->id)}}"><button class="bg-green-500 px-2 py-1 text-sm rounded text-white font-semibold border border-red-200 hover:text-white  hover:border-transparent focus:outline-none">
                                     Edit </button>
 
-                                <form action="#" method="POST" class="inline">
+                                <form action="{{route('menu.destroy',$menu->id)}}" method="POST" class="inline">
                                     <button type="submit" class=" bg-red-500 px-2 py-1 text-sm rounded text-white font-semibold border border-red-200 hover:text-white  hover:border-transparent focus:outline-none" onsubmit="return confirm('yakin hapus')">
                                         Delete</button>
                             </a>

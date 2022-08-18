@@ -112,7 +112,7 @@ https://templatemo.com/tm-571-hexashop
                                             <h4>Kintamani</h4>
                                             <span>Bali, Bangli, Kintamani</span>
                                             <div class="main-border-button">
-                                                <a href="detailkategoriwilayah_kintamani">Lihat detail</a>
+                                                <a href="kintamani">Lihat detail</a>
                                             </div>
                                         </div>
                                         <img src="assets/images/KINTAMANI.jpg" alt="">
@@ -126,7 +126,7 @@ https://templatemo.com/tm-571-hexashop
                                             <h4>Susut</h4>
                                             <span>Bali, Bangli, Susut</span>
                                             <div class="main-border-button">
-                                                <a href="detailkategoriwilayah_susut">Lihat detail</a>
+                                                <a href="susut">Lihat detail</a>
                                             </div>
                                         </div>
                                         <img src="assets/images/SUSUT.jpg" alt="">
@@ -140,7 +140,7 @@ https://templatemo.com/tm-571-hexashop
                                             <h4>Tembuku</h4>
                                             <span>Bali, Bangli, Tembuku</span>
                                             <div class="main-border-button">
-                                                <a href="detailkategoriwilayah_tembuku">Lihat detail</a>
+                                                <a href="tembuku">Lihat detail</a>
                                             </div>
                                         </div>
                                         <img src="assets/images/Air-Terjun-Tukad-Cepung TEMBUKU.webp" alt="">

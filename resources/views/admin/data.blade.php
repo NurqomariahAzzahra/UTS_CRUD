@@ -17,7 +17,7 @@
             </div>
 
         </div>
-        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg m-2">
+        <div class="shadow overflow-hidden border-b border-gray -200 sm:rounded-lg m-2">
 
             <table class="table-fixed w-full">
                 <thead class="bg-gray-600">
@@ -40,7 +40,7 @@
 
                         <td class="px-3 py-3">{{$item->nama_produk}}</td>
                         <td class="px-3 py-3">
-                            <img src="{{asset('storage/'.$item->gambar)}}" class="w-3" alt=""></img>
+                            <img src="{{asset('storage/'.$item->gambar)}}" class="w-12" alt=""></img>
                         </td>
                         <td class="px-3 py-3">{{$item->wilayah_id}}</td>
                         <td class="px-3 py-3">{{$item->harga}}</td>
